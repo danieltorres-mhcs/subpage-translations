@@ -1,4 +1,96 @@
-<h1> Sorry! You arent supposed to be in the main page. Here are available translations.</h1>
-<nav>
-  <a href="zh-cn">Zh-CN CHINESE 中文</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Translations</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#4a2c17;
+    color:#f6e9c8;
+    min-height:100vh;
+}
+
+/* Wood panel */
+.container{
+    width:min(900px,95vw);
+    margin:30px auto;
+    padding:30px;
+    border-radius:10px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #5a3419 0px,
+            #5a3419 18px,
+            #6a4021 18px,
+            #6a4021 36px,
+            #4d2b14 36px,
+            #4d2b14 54px
+        );
+
+    border:4px solid #2d170b;
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,.4),
+        0 10px 30px rgba(0,0,0,.5);
+}
+
+h1{
+    text-align:center;
+    font-size:clamp(2rem,5vw,3rem);
+    margin-bottom:30px;
+    font-weight:normal;
+    color:#ffe8a8;
+    text-shadow:2px 2px 3px rgba(0,0,0,.5);
+}
+
+.list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.item{
+    text-decoration:none;
+    color:#fff6d8;
+    padding:18px 20px;
+    font-size:1.2rem;
+
+    background:rgba(45,23,11,.55);
+
+    border:1px solid #8b5d32;
+    border-radius:6px;
+
+    transition:.2s;
+}
+
+.item:hover{
+    background:#8a5b2d;
+    transform:translateX(8px);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>List of Translations</h1>
+
+<div class="list">
+    <a href="zh-cn" class="item">Chinese - 中文</a>
+</div>
+
+</div>
+
+</body>
+</html>
