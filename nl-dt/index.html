@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daniel Torres</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f5f5f5}
+#app{max-width:1000px;margin:auto;padding:20px}
+.section{margin:24px 0}
+h1,h2,h3,p{margin:0 0 10px}
+img,.slide{width:100%;height:auto;border-radius:12px;display:block}
+.embed{width:100%}
+</style></head><body><div id="app"></div>
+<!--
+========================================
+SETTINGS EXAMPLES
+========================================
+
+Simple white background
+
+const SETTINGS = {
+    background: "#ffffff"
+};
+
+----------------------------------------
+
+Image background
+
+const SETTINGS = {
+    background: "url('background.png') center/cover fixed"
+};
+
+----------------------------------------
+
+Disclaimer disabled
+
+const SETTINGS = {
+    background: "#ffffff",
+
+    disclaimer: {
+        enabled: false
+    }
+};
+
+----------------------------------------
+
+Basic disclaimer
+
+const SETTINGS = {
+    background: "#ffffff",
+
+    disclaimer: {
+        enabled: true,
+        title: "Disclaimer",
+        description: "This page contains flashing lights.",
+        titleColor: "#ff4444",
+        buttonColor: "#4CAF50",
+        buttonText: "OK"
+    }
+};
+
+----------------------------------------
+
+Warning example
+
+const SETTINGS = {
+    background: "#111111",
+
+    disclaimer: {
+        enabled: true,
+        title: "⚠ Warning",
+        description: "This page contains loud audio and flashing animations.",
+        titleColor: "#ff0000",
+        buttonColor: "#0088ff",
+        buttonText: "Continue"
+    }
+};
+
+========================================
+CONTENT EXAMPLES
+========================================
+
+Header
+
+{
+    type: "header",
+    text: "Welcome!",
+    color: "#ff4444"
+}
+
+----------------------------------------
+
+Text
+
+{
+    type: "text",
+    text: "This is a paragraph.",
+    color: "#333333"
+}
+
+----------------------------------------
+
+Image
+
+{
+    type: "image",
+    src: "photo.png",
+    caption: "A nice photo",
+    color: "#666666"
+}
+
+----------------------------------------
+
+Embed HTML
+
+{
+    type: "embed",
+    html: `
+        <iframe
+            src="https://example.com"
+            style="width:100%;height:400px;border:none;">
+        </iframe>
+    `
+}
+
+----------------------------------------
+
+Embed anything
+
+{
+    type: "embed",
+    html: `
+        <div style="padding:20px;background:red;color:white;">
+            Hello World!
+        </div>
+    `
+}
+
+----------------------------------------
+
+Slideshow
+
+{
+    type: "slideshow",
+    images: [
+        "image1.png",
+        "image2.png",
+        "image3.png"
+    ]
+}
+
+----------------------------------------
+
+Multiple sections
+
+const CONTENT = [
+
+    {
+        type: "header",
+        text: "My Website",
+        color: "#0066ff"
+    },
+
+    {
+        type: "text",
+        text: "Welcome to my website!",
+        color: "#222222"
+    },
+
+    {
+        type: "image",
+        src: "banner.png",
+        caption: "Banner",
+        color: "#888888"
+    },
+
+    {
+        type: "slideshow",
+        images: [
+            "1.png",
+            "2.png",
+            "3.png"
+        ]
+    },
+
+    {
+        type: "embed",
+        html: `
+            <iframe
+                src="https://example.com"
+                style="width:100%;height:350px;border:none;">
+            </iframe>
+        `
+    }
+
+];
+
+========================================
+END OF EXAMPLES
+========================================
+-->
+<script>
+const SETTINGS = {
+    background: "#6E371B",
+
+    disclaimer: {
+        enabled: true,
+
+        title: "VRIJWARING",
+        description: "Vanwege mijn beperkte programmeervaardigheden kan de originele Engelse versie details missen. Bovendien heb ik, omdat mijn Chinees niet vloeiend is, een vertaalprogramma gebruikt. Wees daarom niet verbaasd als er grammaticale fouten in voorkomen.",
+
+        titleColor: "#ff4444",
+        buttonColor: "#4CAF50",
+        buttonText: "Begrepen"
+    }
+};
+const CONTENT=[
+
+{type:"header",text:"Hallo！",color:"#FFF"},
+{type:"image",src:"https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1680.JPG",caption:"Omslagfoto",color:"#fafafa"},
+{type:"header",text:"Hallo, ik ben Daniel.",color:"#DBBDA4"},
+{type:"text",text:"Hallo, ik ben Daniel Sebastian Torres. Mijn Chinese naam is 林培钦 (Lin Pei Qin). Ik kom uit Parañaque, Filipijnen, maar ik zal je niet meer over mijn adres vertellen – om voor de hand liggende redenen, zo dom ben ik natuurlijk niet. Ik ben half Amerikaans en half Filipijns 🇺🇸🇵🇭, mijn vader komt uit Nevada en mijn moeder uit Pasay. Ik ben niet de beste in programmeren, maar ik heb wel een paar Github-projecten gemaakt. Ik ben goed in wiskunde, maar niet geweldig. Ik zit nog steeds in het wiskundeprogramma van de universiteit. Mijn verjaardag is op 9 december 2014. De onderstaande afbeelding laat mijn huidige leeftijd zien en hoeveel dagen het nog duurt tot mijn verjaardag, kijk maar! Ik heb al veel gereisd, zowel in binnen- als buitenland (ik reis meestal internationaal). Bijvoorbeeld naar Korea, Japan, Boracay, Guam, enzovoort. Ik heb twee zussen, Sofia en Stella. Ik zit nu op Makati Hope Christian School, maar daarvoor zat ik op Gideon Academy tot en met groep 5, toen ben ik overgestapt naar MHCS. Ik hou van Aziatisch, Amerikaans en Italiaans eten. Ik luister graag naar VOCALOID- en UTAU-nummers, en naar liedjes van Kevin Macleod, oude Amerikaanse popliedjes en dat soort muziek. Mijn hobby's zijn meestal knutselen, tekenen, willekeurige vergelijkingen maken of met pennen spelen. Mijn favoriete dier is de otter 🦦 omdat ze zo klein en schattig zijn en zich altijd gedragen als het schattigste dier dat er is. Kijk ze nou eens! Zo lief! Mijn favoriete vakken zijn TLE en robotica; TLE omdat leraar Theo leuk is en robotica omdat het aansluit bij mijn interesses.",color:"#E3D3CA"},
+{type:"text",text:"Mijn doelen☆",color:"#E6CCAC"},
+{type:"text",text:"Ik ben van plan drie gouden medailles te winnen bij de wiskundeolympiades, ik wil de hoogste onderscheidingen halen voor zowel Chinees als Engels, ik wil mijn Filipijns verbeteren en ik wil in alle rust en met veel plezier afstuderen. Kortom, ik hoop dat ik genoeg talent heb om het laatste jaar van de basisschool te overleven, een jaar dat ik moet koesteren omdat ik weet dat de middelbare school niet meer alleen maar leuk en gezellig zal zijn; en dat ik onderweg ook nog eens eervolle dingen zal bereiken.",color:"#EDBF87"},
+{type:"header",text:"Reizen",color:"#f0e6d3"},
+{type:"slideshow",images:["https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1517.jpg","https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1518.jpg","https:/:raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1521.jpg"]},
+{type:"header",text:"Uitgelicht",color:"#f0e6d3"},
+{type:"slideshow",images:["https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/Untitled399_20260715183054.PNG","https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1522.jpg"]},
+{
+type:"embed",
+html:`
+<div class="birthday-box">
+    <div class="countdown"></div>
+    <div class="label">9 December</div>
+    <div class="age"></div>
+    <div class="date"></div>
+</div>
+
+<style>
+.birthday-box{
+    width:100%;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:url("https://i.pinimg.com/736x/e7/68/6d/e7686dd7b563bbd79e7f193c54c6bc1a.jpg") center/cover;
+    border-radius:12px;
+}
+
+.birthday-box .countdown{
+    font-size:4rem;
+    font-weight:bold;
+}
+</style>
+`
+},
+{type:"header",text:"Mijn vrienden",color:"#f0e6d3"},
+{type:"text",text:"- Miguel",color:"#deb466"},
+{type:"text",text:"- Polo",color:"#deb466"},
+{type:"text",text:"- Laurenzo",color:"#deb466"},
+{type:"text",text:"- Natalie",color:"#deb466"},
+{type:"text",text:"- Justine",color:"#deb466"},
+{type:"text",text:"- Jace",color:"#deb466"},
+{type:"text",text:"- Mijn zussen",color:"#deb466"},
+{type:"text",text:"- Mijn ouders",color:"#deb466"},
+{type:"text",text:"- Mijn voormalige klasgenoten",color:"#deb466"},
+{type:"text",text:"- Iedereen die geen vijand is",color:"#deb466"}
+
+];
+
+
+document.body.style.background = SETTINGS.background;
+if (SETTINGS.disclaimer.enabled) {
+
+    const overlay = document.createElement("div");
+
+    overlay.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.35);
+        backdrop-filter:blur(10px);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:99999;
+    `;
+
+    overlay.innerHTML = `
+        <div style="
+            background:white;
+            max-width:450px;
+            width:90%;
+            padding:28px;
+            border-radius:18px;
+            text-align:center;
+            box-shadow:0 15px 40px rgba(0,0,0,.25);
+        ">
+            <h2 style="margin-top:0;color:${SETTINGS.disclaimer.titleColor}">
+                ${SETTINGS.disclaimer.title}
+            </h2>
+
+            <p style="margin:18px 0">
+                ${SETTINGS.disclaimer.description}
+            </p>
+
+            <button id="discOK"
+                style="
+                    border:none;
+                    color:white;
+                    background:${SETTINGS.disclaimer.buttonColor};
+                    padding:12px 28px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:16px;
+                ">
+                ${SETTINGS.disclaimer.buttonText}
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    document.getElementById("discOK").onclick = () => overlay.remove();
+
+}
+const app=document.getElementById("app");
+CONTENT.forEach(item=>{
+ const d=document.createElement("div"); d.className="section";
+ if(item.type==="header"){let h=document.createElement("h1");h.textContent=item.text;h.style.color=item.color;d.appendChild(h);}
+ if(item.type==="text"){let p=document.createElement("p");p.textContent=item.text;p.style.color=item.color;d.appendChild(p);}
+ if(item.type==="image"){let i=document.createElement("img");i.src=item.src;d.appendChild(i);if(item.caption){let c=document.createElement("p");c.textContent=item.caption;c.style.color=item.color;d.appendChild(c);}}
+ if(item.type==="embed"){d.innerHTML=item.html;}
+ if(item.type==="slideshow"){
+   let im=document.createElement("img");im.className="slide";let idx=0;
+   im.src=item.images[0];d.appendChild(im);
+   setInterval(()=>{idx=(idx+1)%item.images.length;im.src=item.images[idx];},4000);
+ }
+ app.appendChild(d);
+});
+function updateBirthday() {
+    const box = document.querySelector(".birthday-box");
+    if (!box) return;
+
+    const today = new Date();
+
+    // Birthday: 9 December
+    let target = new Date(today.getFullYear(), 11, 9);
+
+    if (today > target) {
+        target = new Date(today.getFullYear() + 1, 11, 9);
+    }
+
+    const days = Math.ceil(
+        (target - today) / (1000 * 60 * 60 * 24)
+    );
+
+    const age = today.getFullYear() - 2014 -
+        (today < new Date(today.getFullYear(), 11, 9) ? 1 : 0);
+
+    box.querySelector(".countdown").textContent = `${days} da.`;
+    box.querySelector(".age").textContent = `Leeftijd: ${age} jaar`;
+    box.querySelector(".date").textContent =
+        today.toLocaleDateString("nl-NL");
+}
+
+updateBirthday();
+setInterval(updateBirthday, 60000);
+</script></body></html>
