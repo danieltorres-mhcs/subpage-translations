@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modular Page Builder</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f5f5f5}
+#app{max-width:1000px;margin:auto;padding:20px}
+.section{margin:24px 0}
+h1,h2,h3,p{margin:0 0 10px}
+img,.slide{width:100%;height:auto;border-radius:12px;display:block}
+.embed{width:100%}
+</style></head><body><div id="app"></div>
+<!--
+========================================
+SETTINGS EXAMPLES
+========================================
+
+Simple white background
+
+const SETTINGS = {
+    background: "#ffffff"
+};
+
+----------------------------------------
+
+Image background
+
+const SETTINGS = {
+    background: "url('background.png') center/cover fixed"
+};
+
+----------------------------------------
+
+Disclaimer disabled
+
+const SETTINGS = {
+    background: "#ffffff",
+
+    disclaimer: {
+        enabled: false
+    }
+};
+
+----------------------------------------
+
+Basic disclaimer
+
+const SETTINGS = {
+    background: "#ffffff",
+
+    disclaimer: {
+        enabled: true,
+        title: "Disclaimer",
+        description: "This page contains flashing lights.",
+        titleColor: "#ff4444",
+        buttonColor: "#4CAF50",
+        buttonText: "OK"
+    }
+};
+
+----------------------------------------
+
+Warning example
+
+const SETTINGS = {
+    background: "#111111",
+
+    disclaimer: {
+        enabled: true,
+        title: "⚠ Warning",
+        description: "This page contains loud audio and flashing animations.",
+        titleColor: "#ff0000",
+        buttonColor: "#0088ff",
+        buttonText: "Continue"
+    }
+};
+
+========================================
+CONTENT EXAMPLES
+========================================
+
+Header
+
+{
+    type: "header",
+    text: "Welcome!",
+    color: "#ff4444"
+}
+
+----------------------------------------
+
+Text
+
+{
+    type: "text",
+    text: "This is a paragraph.",
+    color: "#333333"
+}
+
+----------------------------------------
+
+Image
+
+{
+    type: "image",
+    src: "photo.png",
+    caption: "A nice photo",
+    color: "#666666"
+}
+
+----------------------------------------
+
+Embed HTML
+
+{
+    type: "embed",
+    html: `
+        <iframe
+            src="https://example.com"
+            style="width:100%;height:400px;border:none;">
+        </iframe>
+    `
+}
+
+----------------------------------------
+
+Embed anything
+
+{
+    type: "embed",
+    html: `
+        <div style="padding:20px;background:red;color:white;">
+            Hello World!
+        </div>
+    `
+}
+
+----------------------------------------
+
+Slideshow
+
+{
+    type: "slideshow",
+    images: [
+        "image1.png",
+        "image2.png",
+        "image3.png"
+    ]
+}
+
+----------------------------------------
+
+Multiple sections
+
+const CONTENT = [
+
+    {
+        type: "header",
+        text: "My Website",
+        color: "#0066ff"
+    },
+
+    {
+        type: "text",
+        text: "Welcome to my website!",
+        color: "#222222"
+    },
+
+    {
+        type: "image",
+        src: "banner.png",
+        caption: "Banner",
+        color: "#888888"
+    },
+
+    {
+        type: "slideshow",
+        images: [
+            "1.png",
+            "2.png",
+            "3.png"
+        ]
+    },
+
+    {
+        type: "embed",
+        html: `
+            <iframe
+                src="https://example.com"
+                style="width:100%;height:350px;border:none;">
+            </iframe>
+        `
+    }
+
+];
+
+========================================
+END OF EXAMPLES
+========================================
+-->
+<script>
+const SETTINGS = {
+    background: "#6E371B",
+
+    disclaimer: {
+        enabled: true,
+
+        title: "免责声明",
+        description: "由于我的编程能力有限，原文英文版本可能存在细节缺失。此外，由于我的中文也不流利，所以我使用了翻译工具。如果出现语法错误，请不要感到意外。",
+
+        titleColor: "#ff4444",
+        buttonColor: "#4CAF50",
+        buttonText: "知道"
+    }
+};
+const CONTENT=[
+
+{type:"header",text:"嘿！",color:"#FFF"},
+{type:"image",src:"https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1680.JPG",caption:"封面图片",color:"#fafafa"},
+{type:"text",text:"您好、我是林培钦。",color:"#DBBDA4"},
+{type:"text",text:"我来自菲律宾帕拉尼亚克，但出于显而易见的原因，我不会透露更多我的住址，我当然没那么傻。我是美菲混血儿🇺🇸🇵🇭，我爸爸来自内华达州，妈妈来自帕赛。我的编程水平一般，但也做过一些GitHub项目。我的数学还不错，但算不上顶尖。不过，我目前还是数学竞赛队的成员。我的生日是2014年12月9日。下面的嵌入内容显示了我的当前年龄以及距离生日还有多少天，快来看看吧！我去过很多地方旅行，包括国内和国际旅行（我通常出国旅行）。例如，韩国、日本、长滩岛、关岛等等。我有两个姐妹，索菲亚和斯特拉。我现在就读于马卡蒂希望基督学校，之前在吉甸学院就读，直到五年级才转学到马卡蒂希望基督学校。我喜欢亚洲菜、美国菜和意大利菜。我喜欢听VOCALOID和UTAU的歌，还有Kevin Macleod的歌、老美国流行歌曲等等。我的爱好通常是做手工、画画、做一些随机的比较，或者玩笔。我最喜欢的动物是水獭🦦，因为它们又小又可爱，而且总是表现得特别萌。你看它们！真是太可爱了！我最喜欢的科目是技术与生活技能（TLE）和机器人学；TLE是因为理论课很有趣，机器人学是因为它符合我的兴趣。",color:"#E3D3CA"},
+{type:"text",text:"我的目标☆",color:"#E6CCAC"},
+{type:"text",text:"我计划在数学奥林匹克竞赛中获得三枚金牌，中文和英文都取得最高荣誉，菲律宾语水平也要有所提高，并且能够顺利毕业，享受悠闲的高中生活。简而言之，我希望自己能够拥有足够的天赋，顺利度过小学最后一年——因为我知道高中生活不再像以前那样轻松愉快——并在此过程中取得一些值得尊敬的成就。",color:"#EDBF87"},
+{type:"header",text:"假期",color:"#f0e6d3"},
+{type:"slideshow",images:["https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1517.jpg","https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1518.jpg","https:/:raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1521.jpg"]},
+{type:"header",text:"特色",color:"#f0e6d3"},
+{type:"slideshow",images:["https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/Untitled399_20260715183054.PNG","https://raw.githubusercontent.com/danieltorres-mhcs/assets/refs/heads/main/IMG_1522.jpg"]},
+{
+type:"embed",
+html:`
+<div class="birthday-box">
+    <div class="countdown"></div>
+    <div class="label">距离12月09日</div>
+    <div class="age"></div>
+    <div class="date"></div>
+</div>
+
+<style>
+.birthday-box{
+    width:100%;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:url("https://i.pinimg.com/736x/e7/68/6d/e7686dd7b563bbd79e7f193c54c6bc1a.jpg") center/cover;
+    border-radius:12px;
+}
+
+.birthday-box .countdown{
+    font-size:4rem;
+    font-weight:bold;
+}
+</style>
+`
+},
+{type:"header",text:"我的朋友",color:"#f0e6d3"},
+{type:"text",text:"- Miguel",color:"#deb466"},
+{type:"text",text:"- Polo",color:"#deb466"},
+{type:"text",text:"- Laurenzo",color:"#deb466"},
+{type:"text",text:"- Natalie",color:"#deb466"},
+{type:"text",text:"- Justine",color:"#deb466"},
+{type:"text",text:"- Jace",color:"#deb466"},
+{type:"text",text:"- 我的妹妹",color:"#deb466"},
+{type:"text",text:"- 我的妈妈和爸爸",color:"#deb466"},
+{type:"text",text:"- 我以前的同学",color:"#deb466"},
+{type:"text",text:"- 所有非敌人的人",color:"#deb466"}
+
+];
+
+
+document.body.style.background = SETTINGS.background;
+if (SETTINGS.disclaimer.enabled) {
+
+    const overlay = document.createElement("div");
+
+    overlay.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.35);
+        backdrop-filter:blur(10px);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:99999;
+    `;
+
+    overlay.innerHTML = `
+        <div style="
+            background:white;
+            max-width:450px;
+            width:90%;
+            padding:28px;
+            border-radius:18px;
+            text-align:center;
+            box-shadow:0 15px 40px rgba(0,0,0,.25);
+        ">
+            <h2 style="margin-top:0;color:${SETTINGS.disclaimer.titleColor}">
+                ${SETTINGS.disclaimer.title}
+            </h2>
+
+            <p style="margin:18px 0">
+                ${SETTINGS.disclaimer.description}
+            </p>
+
+            <button id="discOK"
+                style="
+                    border:none;
+                    color:white;
+                    background:${SETTINGS.disclaimer.buttonColor};
+                    padding:12px 28px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:16px;
+                ">
+                ${SETTINGS.disclaimer.buttonText}
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    document.getElementById("discOK").onclick = () => overlay.remove();
+
+}
+const app=document.getElementById("app");
+CONTENT.forEach(item=>{
+ const d=document.createElement("div"); d.className="section";
+ if(item.type==="header"){let h=document.createElement("h1");h.textContent=item.text;h.style.color=item.color;d.appendChild(h);}
+ if(item.type==="text"){let p=document.createElement("p");p.textContent=item.text;p.style.color=item.color;d.appendChild(p);}
+ if(item.type==="image"){let i=document.createElement("img");i.src=item.src;d.appendChild(i);if(item.caption){let c=document.createElement("p");c.textContent=item.caption;c.style.color=item.color;d.appendChild(c);}}
+ if(item.type==="embed"){d.innerHTML=item.html;}
+ if(item.type==="slideshow"){
+   let im=document.createElement("img");im.className="slide";let idx=0;
+   im.src=item.images[0];d.appendChild(im);
+   setInterval(()=>{idx=(idx+1)%item.images.length;im.src=item.images[idx];},4000);
+ }
+ app.appendChild(d);
+});
+function updateBirthday(){
+
+    const box=document.querySelector(".birthday-box");
+    if(!box) return;
+
+    const today=new Date();
+
+    let target=new Date(today.getFullYear(),11,9);
+
+    if(today>target){
+        target=new Date(today.getFullYear()+1,11,9);
+    }
+
+    const days=Math.ceil(
+        (target-today)/(1000*60*60*24)
+    );
+
+    const age=today.getFullYear()-2014-
+    (today < new Date(today.getFullYear(),11,9) ? 1:0);
+
+    box.querySelector(".countdown").textContent=days+"天";
+    box.querySelector(".age").textContent="年龄："+age+"岁";
+    box.querySelector(".date").textContent=
+        today.toLocaleDateString("zh-CN");
+}
+
+updateBirthday();
+setInterval(updateBirthday,60000);
+</script></body></html>
